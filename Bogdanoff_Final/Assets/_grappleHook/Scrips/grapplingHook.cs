@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class grapplingHook : MonoBehaviour
 {
+    public GameObject camera;
+
     public GameObject hook;
     public GameObject hookHolder;
 
@@ -42,6 +44,8 @@ public class grapplingHook : MonoBehaviour
 
             if (currentDistance >= maxDistance)
                 ReturnHook();
+
+            //camera.transform.rotation = Quaternion.;
         }
 
         if(hooked == true && fired == true)
@@ -61,6 +65,9 @@ public class grapplingHook : MonoBehaviour
             this.GetComponent<Rigidbody>().useGravity = true;
             hook.transform.localScale = new Vector3(x, y, z);
         }
+
+        if (Input.GetMouseButton(1) && fired == true)
+            ReturnHook();
     }
 
     void ReturnHook()
