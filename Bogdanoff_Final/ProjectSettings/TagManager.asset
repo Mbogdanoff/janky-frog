@@ -7,6 +7,7 @@ TagManager:
   - Fire
   - Hook
   - Hookable
+  - DialogueTrigger
   layers:
   - Default
   - TransparentFX
