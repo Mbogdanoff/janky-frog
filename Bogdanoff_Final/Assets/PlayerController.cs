@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public Text textbox;
 
 
     void Start()
@@ -17,13 +16,5 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-       // if (other.gameObject.CompareTag("DialogueTrigger"))
-        //{
-          //  textbox.gameObject.SetActive(true);
-        //}
     }
 }
