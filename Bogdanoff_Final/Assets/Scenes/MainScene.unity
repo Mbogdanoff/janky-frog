@@ -149,6 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62bf12bbed86ca148bff30273329cfe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 732689291}
+  dialogueText: {fileID: 850093381}
+  animator: {fileID: 1584867960}
 --- !u!4 &12060962
 Transform:
   m_ObjectHideFlags: 0
@@ -3296,7 +3299,7 @@ MonoBehaviour:
     name: Chicken
     sentences:
     - Hey
-    - How's it goin?
+    - How's it goin'?
     - Cool.
 --- !u!135 &1559496510
 SphereCollider:
@@ -3346,6 +3349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1559496509}
+  nextS: {fileID: 12060961}
+  animator: {fileID: 1584867960}
 --- !u!1 &1571002235
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,8 +3467,9 @@ GameObject:
   - component: {fileID: 1584867957}
   - component: {fileID: 1584867959}
   - component: {fileID: 1584867958}
+  - component: {fileID: 1584867960}
   m_Layer: 5
-  m_Name: Image
+  m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3487,7 +3493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: -167}
+  m_AnchoredPosition: {x: 32, y: -170}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584867958
@@ -3527,6 +3533,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584867956}
   m_CullTransparentMesh: 0
+--- !u!95 &1584867960
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584867956}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b83c7ee7298edf344a5dc9112780d437, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1647439851
 GameObject:
   m_ObjectHideFlags: 0

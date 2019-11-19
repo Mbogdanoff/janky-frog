@@ -5,13 +5,22 @@ using UnityEngine;
 public class DialogueAreaTrigger : MonoBehaviour
 {
     public DialogueTrigger trigger;
-
+    public DialogueManager nextS;
+    public Animator animator;
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"));
         {
-            Invoke("TriggerDialogue", .1f);
-            Debug.Log("Test");
+            trigger.Invoke("TriggerDialogue", 0f);
+            animator.SetBool("isOpen", true);
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            nextS.Invoke("DisplayNextSentence", .1f);
         }
     }
 }
