@@ -16,6 +16,8 @@ public class grapplingHook : MonoBehaviour
     public bool hooked;
     public GameObject hookedObj;
 
+    public GameObject objHooked;  //object you hook to bring to you
+
     public float maxDistance;
     private float currentDistance;
 
@@ -68,6 +70,11 @@ public class grapplingHook : MonoBehaviour
 
         if (Input.GetMouseButton(1) && fired == true)
             ReturnHook();
+
+        if (fired == true)
+        {
+
+        }
     }
 
     void ReturnHook()

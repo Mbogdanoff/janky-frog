@@ -14,5 +14,10 @@ public class hookDetector : MonoBehaviour
             player.GetComponent<grapplingHook>().hooked = true;
             player.GetComponent<grapplingHook>().hookedObj = other.gameObject;
         }
+
+        if(other.tag == "Sticky")
+        {
+            player.GetComponent<grapplingHook>().objHooked = other.gameObject;
+        }
     }
 }
