@@ -20,7 +20,7 @@ public class DialogueAreaTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            nextS.Invoke("DisplayNextSentence", .1f);
+            nextS.Invoke("DisplayNextSentence", 0f);
         }
     }
 }

@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
     }
     IEnumerator TypeSentence (string sentence)
     {
-        dialogueText.text = "";
+        dialogueText.text = " ";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
