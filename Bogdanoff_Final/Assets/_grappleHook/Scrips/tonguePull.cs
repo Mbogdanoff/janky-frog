@@ -5,8 +5,11 @@ using UnityEngine;
 public class tonguePull : MonoBehaviour
 {
     private Transform target;
+    grapplingHook grappleScript;
+    hookDetector hookDet;
+
     
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         
     }

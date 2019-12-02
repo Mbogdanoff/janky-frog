@@ -7,6 +7,7 @@ public class hookDetector : MonoBehaviour
     public GameObject player;
     grapplingHook grappleScript;
     private GameObject hook;
+    public bool normalHit;
 
     void OnTriggerEnter(Collider other)
     {
@@ -18,20 +19,18 @@ public class hookDetector : MonoBehaviour
             player.GetComponent<grapplingHook>().hookedObj = other.gameObject;
         }
 
-        if (other.tag == "Sticky")
+        if (other.tag == "Sticky") //pullable object tag
         {
             var otherTransform = other.GetComponent<Transform>();
             //player.GetComponent<grapplingHook>().objHooked = other.gameObject;
             otherTransform = this.transform;
             grappleScript = GameObject.Find("Hook").GetComponent<grapplingHook>();
-            grappleScript.ReturnHook();
+            //grappleScript.Invoke("ReturnHook", 0f);
+        }
+
+        if (other.gameObject.CompareTag("Untagged")) //normal objects
+        {
+           // grappleScript.Invoke("ReturnHook", 0f);
         }
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        grappleScript.ReturnHook();
-    }
-
-
 }
