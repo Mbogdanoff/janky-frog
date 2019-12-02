@@ -152,6 +152,7 @@ MonoBehaviour:
   nameText: {fileID: 732689291}
   dialogueText: {fileID: 850093381}
   animator: {fileID: 1584867960}
+  boxIsOpen: 0
 --- !u!4 &12060962
 Transform:
   m_ObjectHideFlags: 0
@@ -1913,10 +1914,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SCharacter_Bird2
       objectReference: {fileID: 0}
-    - target: {fileID: 1584313364877740, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 4428894631334056, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.873157
@@ -1961,26 +1958,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 850425738, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 850425738, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: m_Size.z
-      value: 2.1411014
-      objectReference: {fileID: 0}
-    - target: {fileID: 850425738, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: m_Center.x
-      value: -0.000000012292243
-      objectReference: {fileID: 0}
-    - target: {fileID: 850425738, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: m_Center.z
-      value: -0.18526724
-      objectReference: {fileID: 0}
-    - target: {fileID: 1734728514, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: m_Name
-      value: DialogueTriggerBird
-      objectReference: {fileID: 0}
     - target: {fileID: 1734728516, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
       propertyPath: nextS
       value: 
@@ -1989,47 +1966,8 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1584867960}
-    - target: {fileID: 1734728516, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: trigger
-      value: 
-      objectReference: {fileID: 1734728519}
-    - target: {fileID: 1734728519, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1734728519, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: dialogue.sentences.Array.data[3]
-      value: Many thanks small companion!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1734728519, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1734728519, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
-      propertyPath: dialogue.sentences.Array.data[2]
-      value: I am in need of some seeds, could you get them for me?
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d8c53370341c254eb80f72f77a48dab, type: 3}
---- !u!1 &850425736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1584313364877740, guid: 6d8c53370341c254eb80f72f77a48dab,
-    type: 3}
-  m_PrefabInstance: {fileID: 850425735}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &850425737
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 850425736}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0891612, z: 2.1371665}
-  m_Center: {x: -0.0000000030068215, y: 0.593042, z: -0.17994943}
 --- !u!1 &987480236
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,8 +3353,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559496508}
   m_LocalRotation: {x: -0, y: -0.9970111, z: -0, w: -0.077258065}
-  m_LocalPosition: {x: 0.016012626, y: 0.33313817, z: 0.051790398}
-  m_LocalScale: {x: 1.1565964, y: 1.1022781, z: 0.9671739}
+  m_LocalPosition: {x: 0.016012626, y: 0.33313814, z: 0.051790398}
+  m_LocalScale: {x: 1.1565964, y: 1.102278, z: 0.9671739}
   m_Children: []
   m_Father: {fileID: 4303844479765364}
   m_RootOrder: 0
@@ -3436,6 +3374,7 @@ MonoBehaviour:
   trigger: {fileID: 1559496509}
   nextS: {fileID: 12060961}
   animator: {fileID: 1584867960}
+  boxIsOpen: 0
 --- !u!1 &1571002235
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,18 +4087,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728103797}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1734728519 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1734728519, guid: 6d8c53370341c254eb80f72f77a48dab,
-    type: 3}
-  m_PrefabInstance: {fileID: 850425735}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d901e8855e5ec34e8bbf496eca3435a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1736340617
 GameObject:
   m_ObjectHideFlags: 0

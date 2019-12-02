@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (boxIsOpen == false)
         {
-
+            boxIsOpen = true;
             animator.SetBool("isOpen", true);
 
             nameText.text = dialogue.name;
@@ -51,15 +51,17 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
-    IEnumerator TypeSentence (string sentence)
+
+    IEnumerator TypeSentence(string sentence)
     {
-        dialogueText.text = " ";
+        dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
         }
     }
+
 
     void EndDialogue()
     {

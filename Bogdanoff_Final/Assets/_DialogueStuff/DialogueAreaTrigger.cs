@@ -7,7 +7,6 @@ public class DialogueAreaTrigger : MonoBehaviour
     public DialogueTrigger trigger;
     public DialogueManager nextS;
     public Animator animator;
-    public static bool boxIsOpen;
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,7 +14,6 @@ public class DialogueAreaTrigger : MonoBehaviour
         {
             trigger.Invoke("TriggerDialogue", 0f);
             animator.SetBool("isOpen", true);
-            boxIsOpen = true;
         }
     }
 

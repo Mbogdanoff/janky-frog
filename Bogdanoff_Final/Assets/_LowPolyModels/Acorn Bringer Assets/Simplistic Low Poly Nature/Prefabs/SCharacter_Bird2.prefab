@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 1734728515}
   - component: {fileID: 1734728518}
   - component: {fileID: 1734728517}
-  - component: {fileID: 1734728516}
   - component: {fileID: 1734728519}
+  - component: {fileID: 1734728516}
   m_Layer: 0
-  m_Name: DialogueTrigger (1)
-  m_TagString: DialogueTrigger
+  m_Name: DialogueTriggerBird
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,21 +55,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1734728516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734728514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 680c92ed2dd3a34498e8d04fd4b53fd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
-  nextS: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &1734728519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,8 +71,24 @@ MonoBehaviour:
     name: Crow
     sentences:
     - Hello there Mr. Frog.
+    - I am in need of some seeds, could you get them for me? 1
     - I am in need of some seeds, could you get them for me?
     - Many thanks small companion!
+--- !u!114 &1734728516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734728514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680c92ed2dd3a34498e8d04fd4b53fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 1734728519}
+  nextS: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &1033103479363342
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +725,7 @@ GameObject:
   - component: {fileID: 4428894631334056}
   - component: {fileID: 95744679087321986}
   - component: {fileID: 850425738}
+  - component: {fileID: 850425737}
   m_Layer: 0
   m_Name: SCharacter_Bird2
   m_TagString: Untagged
@@ -775,11 +777,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584313364877740}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0891607, z: 2.1411014}
+  m_Center: {x: -0.000000012292243, y: 0.593042, z: -0.18526724}
+--- !u!65 &850425737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584313364877740}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0891607, z: 2.1069014}
-  m_Center: {x: -0.0000000045324056, y: 0.593042, z: -0.16816702}
+  m_Size: {x: 1, y: 1.0891612, z: 2.1371665}
+  m_Center: {x: -0.0000000030068215, y: 0.593042, z: -0.17994943}
 --- !u!1 &1611628611915640
 GameObject:
   m_ObjectHideFlags: 0
