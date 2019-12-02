@@ -8,9 +8,11 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        if (DialogueManager.isOpen == false)
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
+        /* if (DialogueManager.boxIsOpen == false)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        }
+        } */
     }
 }

@@ -7,12 +7,15 @@ public class DialogueAreaTrigger : MonoBehaviour
     public DialogueTrigger trigger;
     public DialogueManager nextS;
     public Animator animator;
+    public static bool boxIsOpen;
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"));
         {
             trigger.Invoke("TriggerDialogue", 0f);
             animator.SetBool("isOpen", true);
+            boxIsOpen = true;
         }
     }
 

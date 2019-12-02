@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class tonguePull : MonoBehaviour
 {
-    private Transform target;
-    grapplingHook grappleScript;
-    hookDetector hookDet;
+   /* public float speed = 1.0f;
 
-    
-    private void OnTriggerEnter(Collider other)
+    // The target (cylinder) position.
+    private Transform target;
+    public GameObject tongue;
+
+    void Awake()
     {
-        
+        target = tongue.transform;
     }
+
+    void Update()
+    {
+        // Move our position a step closer to the target.
+        float step = speed * Time.deltaTime; // calculate distance to move
+        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+    } */
 }

@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
-    public static bool isOpen = false;
+    public bool boxIsOpen = false;
 
     void Start() {
 
@@ -21,8 +21,9 @@ public class DialogueManager : MonoBehaviour
 
    public void StartDialogue (Dialogue dialogue)
     {
-        if (isOpen == false)
+        if (boxIsOpen == false)
         {
+
             animator.SetBool("isOpen", true);
 
             nameText.text = dialogue.name;
@@ -35,8 +36,6 @@ public class DialogueManager : MonoBehaviour
             }
 
             DisplayNextSentence();
-
-            isOpen = true;
         }
     }
 
@@ -65,6 +64,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("isOpen", false);
-        isOpen = false;
+        boxIsOpen = false;
     }
 }
