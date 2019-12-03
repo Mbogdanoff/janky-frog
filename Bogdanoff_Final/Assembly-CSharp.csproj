@@ -64,12 +64,14 @@
   <ItemGroup>
     <Compile Include="Assets\_DialogueStuff\Dialogue.cs" />
     <Compile Include="Assets\_DialogueStuff\DialogueAreaTrigger.cs" />
+    <Compile Include="Assets\_DialogueStuff\DialogueAreaTriggerCrow.cs" />
     <Compile Include="Assets\_DialogueStuff\DialogueManager.cs" />
     <Compile Include="Assets\_DialogueStuff\DialogueTrigger.cs" />
     <Compile Include="Assets\_grappleHook\Scrips\grapplingHook.cs" />
     <Compile Include="Assets\_grappleHook\Scrips\hookDetector.cs" />
     <Compile Include="Assets\_grappleHook\Scrips\tonguePull.cs" />
     <Compile Include="Assets\_QuestStuff\MasterQuest.cs" />
+    <Compile Include="Assets\_QuestStuff\PlayerQuests.cs" />
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />

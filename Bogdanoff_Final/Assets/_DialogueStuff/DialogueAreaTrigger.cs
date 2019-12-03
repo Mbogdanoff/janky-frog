@@ -15,6 +15,7 @@ public class DialogueAreaTrigger : MonoBehaviour
             trigger.Invoke("TriggerDialogue", 0f);
             animator.SetBool("isOpen", true);
         }
+
     }
 
     void Update()
