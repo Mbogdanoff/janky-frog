@@ -13,16 +13,15 @@ public class PlayerQuests : MonoBehaviour
 
     void Start()
     {
-        //turtCountText.text = "";
+        turtCountText.text = "";
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("TurtlePickup") /* && qManager.turtleQStarted == true */)
+        if (other.gameObject.CompareTag("TurtlePickup")  && qManager.turtleQStarted == true )
         {
             other.gameObject.SetActive(false);
             turtFlowerCount = turtFlowerCount + 1;
             SetCountTextTurt();
-            turtCountText.text = turtCountText.text + "";
             if (turtFlowerCount == 3)
             {
                 qManager.turtStrike.enabled = true;
@@ -38,15 +37,15 @@ public class PlayerQuests : MonoBehaviour
     }
     public void SetCountTextTurt()
     {
-        //turtCountText.text = turtCountText.text + "/3";
+        turtCountText.text = turtFlowerCount + turtCountText.text;
     }
 
     void Update()
     {
-       /* if (qManager.turtleQStarted == true)
+        if (qManager.turtleQStarted == true)
         {
-            //turtCountText.text = turtCountText.text + "/3";
+            //turtCountText.text = turtCountText.text;
 
-        } */
+        } 
     }
 }

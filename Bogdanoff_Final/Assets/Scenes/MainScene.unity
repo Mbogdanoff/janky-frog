@@ -4824,6 +4824,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1584867960}
+    - target: {fileID: 2028747969, guid: d2d67fda15fa26342932fffde03aeb05, type: 3}
+      propertyPath: qManager
+      value: 
+      objectReference: {fileID: 55114254}
     - target: {fileID: 2028747970, guid: d2d67fda15fa26342932fffde03aeb05, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
       value: Caaaaaaaan yoooooooooooou geeeeeeeeet meeeeeee thooooooooose flooooooooooooooooowerssssss?

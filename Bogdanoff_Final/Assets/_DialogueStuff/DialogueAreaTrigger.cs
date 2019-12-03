@@ -7,7 +7,7 @@ public class DialogueAreaTrigger : MonoBehaviour
     public DialogueTrigger trigger;
     public DialogueManager nextS;
     public Animator animator;
-    MasterQuest qManager;
+    public MasterQuest qManager;
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,6 +15,7 @@ public class DialogueAreaTrigger : MonoBehaviour
         {
             trigger.Invoke("TriggerDialogue", 0f);
             animator.SetBool("isOpen", true);
+            qManager.turtleQStarted = true;
 
         }
     }

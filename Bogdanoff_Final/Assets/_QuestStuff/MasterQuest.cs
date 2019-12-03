@@ -29,15 +29,15 @@ public class MasterQuest : MonoBehaviour
         if (turtleQStarted == true)
         {
             turtText.text = "Collect 3 flowers";
-           // playerQuests.turtCountText.text = playerQuests.turtCountText.text + "/3";
+            //playerQuests.turtCountText.text = playerQuests.turtCountText.text + "/3";
 
         }
 
-        /* if (playerQuests.turtFlowerCount == 3)
+         if (playerQuests.turtFlowerCount == 3)
         {
             turtStrike.enabled = true;
             turtleQComp = true;
-        }*/
+        }
     }
 }
 
