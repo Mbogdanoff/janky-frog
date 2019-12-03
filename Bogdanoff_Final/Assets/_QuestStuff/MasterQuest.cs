@@ -29,7 +29,6 @@ public class MasterQuest : MonoBehaviour
         if (turtleQStarted == true)
         {
             turtText.text = "Collect 3 flowers";
-
         }
 
          if (playerQuests.turtFlowerCount == 3)

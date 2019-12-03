@@ -12,6 +12,7 @@ TagManager:
   - Sticky
   - TurtlePickup
   - Turtle
+  - Holder
   layers:
   - Default
   - TransparentFX

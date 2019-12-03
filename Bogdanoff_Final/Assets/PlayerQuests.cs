@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerQuests : MonoBehaviour
 {
     public MasterQuest qManager;
+    public DialogueAreaTrigger TurtTrigger;
 
     public int turtFlowerCount = 0;
     public Text turtCountText;
@@ -42,10 +43,9 @@ public class PlayerQuests : MonoBehaviour
 
     void Update()
     {
-        if (qManager.turtleQStarted == true)
+        if (qManager.turtleQComp == true)
         {
-            //turtCountText.text = turtCountText.text;
-
+           qManager.turtleQStarted = false;
         } 
     }
 }
