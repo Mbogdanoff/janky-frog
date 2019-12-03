@@ -37,7 +37,7 @@ public class PlayerQuests : MonoBehaviour
     }
     public void SetCountTextTurt()
     {
-        turtCountText.text = turtFlowerCount + turtCountText.text;
+        turtCountText.text = turtFlowerCount + "/3";
     }
 
     void Update()
