@@ -5,38 +5,34 @@ using UnityEngine.UI;
 
 public class PlayerQuests : MonoBehaviour
 {
-    MasterQuest questManage;
+    MasterQuest qManager;
 
-    public int turtFlowerCount = 3;
-    public Text turtCountText;
-    public GameObject TurtleQText;
+    public int turtFlowerCount = 0;
+    public GameObject turtle;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("TurtlePickup") && questManage.turtleQStarted == true)
+        if (other.gameObject.CompareTag("TurtlePickup") && qManager.turtleQStarted == true)
         {
             other.gameObject.SetActive(false);
-            turtFlowerCount = turtFlowerCount - 1;
-            
+            qManager.turtCountText.text = qManager.turtCountText.text + 1;
+            SetCountTextTurt();
+            if (qManager.turtCountText.text == 0)
+            {
+
+            }
+        }
+
+        if (other.gameObject.CompareTag("Turtle"))
+        {
+            qManager.turtleQStarted = true;
         }
     }
-
-    void SetCountText()
+    public void SetCountTextTurt()
     {
-        turtCountText.text = turtCountText.ToString () + "/3";
-        if (turtFlowerCount == 0)
-        {
-
-        }
+        qManager.turtCountText.text = qManager.turtCountText.text + "/3";
     }
 }
+
+

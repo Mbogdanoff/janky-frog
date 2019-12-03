@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,9 +199,9 @@ MonoBehaviour:
   chickenQStarted: 0
   chickenQComp: 0
   turtleQStarted: 0
-  turtleQComp: 0
-  turtFlowerCount: 3
-  TurtleQText: {fileID: 965697835}
+  turtText: {fileID: 965697837}
+  turtCountText: {fileID: 166314049}
+  turtStrike: {fileID: 1319868253}
   birdQStarted: 0
   birdQComp: 0
 --- !u!4 &55114255
@@ -218,6 +218,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &166314047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166314048}
+  - component: {fileID: 166314050}
+  - component: {fileID: 166314049}
+  m_Layer: 5
+  m_Name: TurtCount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &166314048
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166314047}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.36483315, y: 0.36483312, z: 0.36483315}
+  m_Children: []
+  m_Father: {fileID: 234433880}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 45.25409, y: 24.980623}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &166314049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166314047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 9779b95091ae23346a37524aac742882, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &166314050
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166314047}
+  m_CullTransparentMesh: 0
 --- !u!1 &189482305
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,17 +533,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 234433879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.8810096, y: 4.1871715, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.49353}
+  m_LocalScale: {x: 1.6445994, y: 2.3709545, z: 0.57084143}
   m_Children:
   - {fileID: 1639172960}
   - {fileID: 965697836}
+  - {fileID: 166314048}
+  - {fileID: 1319868252}
   m_Father: {fileID: 528906470}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1876, y: 338}
+  m_AnchoredPosition: {x: 609, y: 9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234433881
@@ -480,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3019608}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1226,8 +1307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc8a0223323aa741847c5234637acfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turtFlowerCount: 3
-  turtCountText: {fileID: 0}
+  turtFlowerCount: 0
+  turtle: {fileID: 1872867845}
 --- !u!1 &612653736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,7 +2117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.1, y: 19.8}
+  m_AnchoredPosition: {x: -1.7, y: 19.8}
   m_SizeDelta: {x: 223.41, y: 59.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965697837
@@ -2072,7 +2153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '" "'
+  m_Text: Collect 3 flowers
 --- !u!222 &965697838
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2919,6 +3000,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315386879}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1319868251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319868252}
+  - component: {fileID: 1319868254}
+  - component: {fileID: 1319868253}
+  m_Layer: 5
+  m_Name: TurtStrikethrough
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1319868252
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319868251}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7248529, y: 0.0061581447, z: 0.36483315}
+  m_Children: []
+  m_Father: {fileID: 234433880}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -7.9020996, y: 27.753355}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1319868253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319868251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1319868254
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319868251}
+  m_CullTransparentMesh: 0
 --- !u!1 &1345788249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,7 +3787,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639172959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 81.8}
+  m_LocalPosition: {x: 0, y: 0, z: 2.3}
   m_LocalScale: {x: 0.38273, y: 0.38273, z: -0.9195088}
   m_Children: []
   m_Father: {fileID: 234433880}
@@ -3640,7 +3795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.1999831, y: 37.70002}
+  m_AnchoredPosition: {x: -1, y: 37.70002}
   m_SizeDelta: {x: 223.41, y: 59.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639172961
@@ -4376,6 +4531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SCharacter_Turtle
       objectReference: {fileID: 0}
+    - target: {fileID: 1580388819070796, guid: d2d67fda15fa26342932fffde03aeb05, type: 3}
+      propertyPath: m_TagString
+      value: Turtle
+      objectReference: {fileID: 0}
     - target: {fileID: 4188331867383602, guid: d2d67fda15fa26342932fffde03aeb05, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.370922
@@ -4432,6 +4591,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1584867960}
+    - target: {fileID: 2028747970, guid: d2d67fda15fa26342932fffde03aeb05, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Caaaaaaaan yoooooooooooou geeeeeeeeet meeeeeee thooooooooose flooooooooooooooooowerssssss?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2d67fda15fa26342932fffde03aeb05, type: 3}
 --- !u!1 &1841680136
@@ -4466,6 +4629,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1872867845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1580388819070796, guid: d2d67fda15fa26342932fffde03aeb05,
+    type: 3}
+  m_PrefabInstance: {fileID: 1794214056}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1882013973
 GameObject:
   m_ObjectHideFlags: 0
@@ -5111,6 +5280,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TurtlePickup
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: adb45f018056ceb4ba92aea66a7569d9, type: 3}
+      propertyPath: m_TagString
+      value: TurtlePickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: adb45f018056ceb4ba92aea66a7569d9, type: 3}
+      propertyPath: m_TagString
+      value: TurtlePickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: adb45f018056ceb4ba92aea66a7569d9, type: 3}
+      propertyPath: m_TagString
+      value: TurtlePickup
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: adb45f018056ceb4ba92aea66a7569d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.352
@@ -5185,8 +5366,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2114005703}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2114005706
-BoxCollider:
+--- !u!136 &2114005706
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5195,9 +5376,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.19309425, y: 0.32862616, z: 0.16195786}
-  m_Center: {x: 0.0011225063, y: 0.14875476, z: 0.009722844}
+  m_Radius: 0.069406316
+  m_Height: 0.33321735
+  m_Direction: 1
+  m_Center: {x: -6.481704e-11, y: 0.15452889, z: 0.004044849}
 --- !u!1 &342048033298688142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 342048033298688142, guid: c6453f8e1f814744d8b94e5a6d1f9942,

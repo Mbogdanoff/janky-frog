@@ -11,6 +11,7 @@ TagManager:
   - FxTemporaire
   - Sticky
   - TurtlePickup
+  - Turtle
   layers:
   - Default
   - TransparentFX
