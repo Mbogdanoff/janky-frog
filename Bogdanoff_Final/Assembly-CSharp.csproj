@@ -71,8 +71,8 @@
     <Compile Include="Assets\_grappleHook\Scrips\hookDetector.cs" />
     <Compile Include="Assets\_grappleHook\Scrips\tonguePull.cs" />
     <Compile Include="Assets\_QuestStuff\MasterQuest.cs" />
-    <Compile Include="Assets\_QuestStuff\PlayerQuests.cs" />
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\PlayerQuests.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />

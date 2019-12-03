@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class MasterQuest : MonoBehaviour
 {
-    PlayerQuests playerQuests;
+    public PlayerQuests playerQuests;
 
     public bool chickenQStarted = false;
     public bool chickenQComp = false;
 
     public bool turtleQStarted = false;
-    public static bool turtleQComp = false;
+    public bool turtleQComp = false;
     public Text turtText;
-    public Text turtCountText;
+
     public Image turtStrike;
 
     public bool birdQStarted = false;
@@ -29,14 +29,15 @@ public class MasterQuest : MonoBehaviour
         if (turtleQStarted == true)
         {
             turtText.text = "Collect 3 flowers";
+           // playerQuests.turtCountText.text = playerQuests.turtCountText.text + "/3";
 
         }
 
-        if (playerQuests.turtFlowerCount == 3)
+        /* if (playerQuests.turtFlowerCount == 3)
         {
             turtStrike.enabled = true;
             turtleQComp = true;
-        }
+        }*/
     }
 }
 
