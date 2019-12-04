@@ -18,20 +18,27 @@ public class PlayerQuests : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("TurtlePickup")  && qManager.turtleQStarted == true )
+        if (other.gameObject.CompareTag("TurtlePickup"))
         {
-            other.gameObject.SetActive(false);
-            turtFlowerCount = turtFlowerCount + 1;
-            SetCountTextTurt();
-            if (turtFlowerCount == 3)
+
+            print("qS:" + qManager.turtleQStarted);
+            if (qManager.turtleQStarted)
             {
-                qManager.turtStrike.enabled = true;
-                qManager.turtleQComp = true;
+                print("DID THIS!");
+                other.gameObject.SetActive(false);
+                turtFlowerCount = turtFlowerCount + 1;
+                SetCountTextTurt();
+                if (turtFlowerCount == 3)
+                {
+                    qManager.turtStrike.enabled = true;
+                    qManager.turtleQComp = true;
+                }
             }
         }
 
         if (other.gameObject.CompareTag("Turtle"))
         {
+            print("HEY!");
             qManager.turtleQStarted = true;
 
         }

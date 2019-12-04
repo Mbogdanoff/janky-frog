@@ -20,6 +20,10 @@ public class tonguePull : MonoBehaviour
     {
         if (stuck == true)
         {
+            if (Vector3.Distance(transform.position, target.position)< 3)
+            {
+                stuck = false;
+            }
             // Move our position a step closer to the target.
             float step = speed * Time.deltaTime; // calculate distance to move
             transform.position = Vector3.MoveTowards(transform.position, target.position, step);
@@ -35,7 +39,7 @@ public class tonguePull : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Holder"))
         {
-            stuck = false;
+           // stuck = false;
         }
     }
 

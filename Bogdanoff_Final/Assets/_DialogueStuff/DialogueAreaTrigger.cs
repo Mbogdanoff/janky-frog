@@ -11,7 +11,7 @@ public class DialogueAreaTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && qManager.turtleQComp == false);
+        if (other.gameObject.CompareTag("Player") && qManager.turtleQComp == false)
         {
             trigger.Invoke("TriggerDialogue", 0f);
             animator.SetBool("isOpen", true);
