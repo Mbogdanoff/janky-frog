@@ -27,4 +27,12 @@ public class DialogueAreaTrigger : MonoBehaviour
             nextS.Invoke("DisplayNextSentence", 0f);
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            nextS.Invoke("EndDialogue", 0f);
+        }
+    }
 }
