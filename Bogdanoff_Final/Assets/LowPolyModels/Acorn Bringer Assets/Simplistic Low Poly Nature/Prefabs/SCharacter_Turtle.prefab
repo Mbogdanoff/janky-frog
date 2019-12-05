@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2028747970}
   - component: {fileID: 2028747969}
   m_Layer: 0
-  m_Name: DiaTrigTurt
+  m_Name: DialTrigTurt
   m_TagString: DialogueTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
     name: Turtle
     sentences:
     - Heeeeeeeeeeeeeey.
-    - Caaaaaaaan yoooooooooooou geeeeeeeeet meeeeeee thaaaaaaaaaaaat flooooooooooooooooower?
+    - Caaaaaaaan yoooooooooooou geeeeeeeeet meeeeeee thooooooooose flooooooooooooooooowerssssss?
     - Thaaaaaaaaaaaaaaaaaaaaaankkkkssssss.
 --- !u!114 &2028747969
 MonoBehaviour:
@@ -89,6 +89,7 @@ MonoBehaviour:
   nextS: {fileID: 0}
   animator: {fileID: 0}
   qManager: {fileID: 0}
+  turtle: {fileID: 1580388819070796}
 --- !u!1 &1080573870396286
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,9 +692,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4188331867383602}
   - component: {fileID: 95674574316146116}
+  - component: {fileID: 648784215}
   m_Layer: 0
   m_Name: SCharacter_Turtle
-  m_TagString: Untagged
+  m_TagString: Sticky
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -725,7 +727,7 @@ Animator:
   m_GameObject: {fileID: 1580388819070796}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b1dd02c4daa7e6248ab9cf52038f20cf, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 382e8d323be69c14798e9bb1d4ffda50, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -734,6 +736,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &648784215
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580388819070796}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6672969, y: 1.0192602, z: 2.0623124}
+  m_Center: {x: 0.03438878, y: 0.4244057, z: 0.049722075}
 --- !u!1 &1606509526633532
 GameObject:
   m_ObjectHideFlags: 0
