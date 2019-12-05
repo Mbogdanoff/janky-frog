@@ -10,6 +10,7 @@ public class DialogueAreaTriggerCrow : MonoBehaviour
     public int crowFeatherCount = 0;
     public PlayerQuests playerQ;
     public MasterQuest qManager;
+    public GameObject crow;
 
 
     void OnTriggerEnter(Collider other)
@@ -25,26 +26,31 @@ public class DialogueAreaTriggerCrow : MonoBehaviour
         {
             crowFeatherCount = crowFeatherCount + 1;
             SetCountTextCrow();
-            Debug.Log("+1");
             if (crowFeatherCount == 5)
             {
                 qManager.crowStrike.enabled = true;
                 qManager.crowQComp = true;
             }
         }
+    }
 
-        void Update()
+    void SetCountTextCrow()
+    {
+        playerQ.crowCountText.text = crowFeatherCount + "/5";
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                nextS1.Invoke("DisplayNextSentence", 0f);
-            }
+            nextS1.Invoke("DisplayNextSentence", 0f);
         }
 
-
-        void SetCountTextCrow()
+        if (qManager.crowQComp == true)
         {
-            playerQ.crowCountText.text = crowFeatherCount + "/5";
+            qManager.crowDestroyed = true;
+            Destroy(crow);
         }
+
     }
 }

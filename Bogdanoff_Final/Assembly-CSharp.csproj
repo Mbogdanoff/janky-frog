@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DialogueStuff\CrowTrig2.cs" />
     <Compile Include="Assets\DialogueStuff\Dialogue.cs" />
     <Compile Include="Assets\DialogueStuff\DialogueAreaTrigger.cs" />
     <Compile Include="Assets\DialogueStuff\DialogueAreaTriggerCrow.cs" />

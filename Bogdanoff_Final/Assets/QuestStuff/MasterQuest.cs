@@ -22,7 +22,7 @@ public class MasterQuest : MonoBehaviour
     public bool crowQComp = false;
     public Text crowText;
     public Text crowStrike;
-    //public GameObject crow2;
+    public GameObject crow2;
 
 
     void Start()
@@ -56,9 +56,7 @@ public class MasterQuest : MonoBehaviour
             turtle2.SetActive(true);
 
         }
-
-
-
+         //CROW STUFF STARTS
         if (crowQStarted == true)
         {
             crowText.text = "Find and bring 5 Feathers to Mr. Crow";
@@ -77,13 +75,7 @@ public class MasterQuest : MonoBehaviour
 
         if (crowDestroyed == true)
         {
-            //crow2.SetActive(true);
-
+            crow2.SetActive(true);
         }
     }
 }
-
-
-
-
-
