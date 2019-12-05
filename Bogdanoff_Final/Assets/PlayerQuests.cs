@@ -7,24 +7,28 @@ public class PlayerQuests : MonoBehaviour
 {
     public MasterQuest qManager;
     public DialogueAreaTrigger TurtTrigger;
+    public DialogueAreaTriggerCrow CrowTrigger;
 
     public int turtFlowerCount = 0;
     public Text turtCountText;
     public Text turtText;
 
+    public int crowFeatherCount = 0;
+    public Text crowCountText;
+    public Text crowtText;
+
     void Start()
     {
         turtCountText.text = "";
+        crowCountText.text = "";
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("TurtlePickup"))
+        if (other.gameObject.CompareTag("TurtlePickup") && qManager.turtleQStarted == true)
         {
 
-            print("qS:" + qManager.turtleQStarted);
             if (qManager.turtleQStarted)
             {
-                print("DID THIS!");
                 other.gameObject.SetActive(false);
                 turtFlowerCount = turtFlowerCount + 1;
                 SetCountTextTurt();
@@ -38,10 +42,10 @@ public class PlayerQuests : MonoBehaviour
 
         if (other.gameObject.CompareTag("Turtle"))
         {
-            print("HEY!");
             qManager.turtleQStarted = true;
 
         }
+
     }
     public void SetCountTextTurt()
     {

@@ -8,6 +8,8 @@ public class DialogueAreaTrigger : MonoBehaviour
     public DialogueManager nextS;
     public Animator animator;
     public MasterQuest qManager;
+    private Object self;
+    public GameObject turtle;
 
     void OnTriggerEnter(Collider other)
     {
@@ -25,6 +27,13 @@ public class DialogueAreaTrigger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             nextS.Invoke("DisplayNextSentence", 0f);
+        }
+
+        if (qManager.turtleQComp == true)
+        {
+            qManager.turtDestroyed = true;
+            Destroy(turtle);
+
         }
     }
 
