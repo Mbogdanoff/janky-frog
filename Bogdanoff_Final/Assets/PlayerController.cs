@@ -5,8 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-
-
+    void Update()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Floor"))
