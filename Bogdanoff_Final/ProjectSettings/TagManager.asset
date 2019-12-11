@@ -14,6 +14,7 @@ TagManager:
   - Turtle
   - Holder
   - CrowPickup
+  - Floor
   layers:
   - Default
   - TransparentFX

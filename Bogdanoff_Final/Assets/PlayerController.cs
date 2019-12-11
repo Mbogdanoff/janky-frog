@@ -7,14 +7,11 @@ public class PlayerController : MonoBehaviour
 {
 
 
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-
-    void Update()
-    {
-        
+        if (other.CompareTag("Floor"))
+        {
+            transform.position = new Vector3(0, 5, 0);
+        }
     }
 }
