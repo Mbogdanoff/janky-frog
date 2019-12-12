@@ -8,6 +8,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
+        public AudioClip jumpSound;
+        public AudioSource source;
+        bool isJumpSound = false;
+
         [Serializable]
         public class MovementSettings
         {
@@ -19,6 +23,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
+
 
 #if !MOBILE_INPUT
             private bool m_Running;
@@ -134,6 +139,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
+
+            if (m_Jump &! isJumpSound)
+            {
+                source.PlayOneShot(jumpSound, 1f);
+                isJumpSound = true;
+                Invoke("isJump", 1.5f);
+            }
+        }
+
+        void isJump()
+        {
+            isJumpSound = false;
         }
 
 

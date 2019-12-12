@@ -26,8 +26,10 @@ public class grapplingHook : MonoBehaviour
     public float y = 0.2f;
     public float z = 0.2f;
 
-    
-
+    public AudioClip mlem;
+    public AudioSource source;
+    bool isMlem = false;
+      
     void Update()
     {
         //firing the hook
@@ -40,6 +42,7 @@ public class grapplingHook : MonoBehaviour
             rope.SetVertexCount(2);
             rope.SetPosition(0, hookHolder.transform.position);
             rope.SetPosition(1, hook.transform.position);
+            
         }
 
         if(fired == true && hooked == false)
@@ -86,5 +89,4 @@ public class grapplingHook : MonoBehaviour
         LineRenderer rope = hook.GetComponent<LineRenderer>();
         rope.SetVertexCount(0);
     }
-
 }

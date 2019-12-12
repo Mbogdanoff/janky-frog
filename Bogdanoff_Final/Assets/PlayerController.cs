@@ -8,11 +8,10 @@ public class PlayerController : MonoBehaviour
 
     public AudioClip ribbit;
     public AudioSource source;
+    bool rib;
+    bool isMlem = false;
+    public AudioClip mlem;
 
-    void Start()
-    {
-        source = GetComponent<AudioSource>();
-    }
 
     void Update()
     {
@@ -21,10 +20,19 @@ public class PlayerController : MonoBehaviour
             Application.Quit();
         }
 
-        if (Input.GetKey("R"))
+        if (Input.GetKey("r") &&! rib)
         {
             source.PlayOneShot(ribbit);
+            rib = true;
+            Invoke("isRib", 0.75f);
         }
+        
+        if (Input.GetMouseButton(0) && !isMlem)
+        {
+            source.PlayOneShot(mlem);
+            isMlem = true;
+            Invoke("MlemShot", .25f);
+        } 
     }
     void OnTriggerEnter(Collider other)
     {
@@ -32,5 +40,15 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0, 5, 0);
         }
+    }
+
+    void isRib()
+    {
+        rib = false;
+    }
+
+    void MlemShot()
+    {
+        isMlem = false;
     }
 }

@@ -24,6 +24,8 @@ public class MasterQuest : MonoBehaviour
     public Text crowStrike;
     public GameObject crow2;
 
+    public AudioClip qComp;
+
 
     void Start()
     {

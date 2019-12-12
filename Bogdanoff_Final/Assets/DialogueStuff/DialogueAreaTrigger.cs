@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class DialogueAreaTrigger : MonoBehaviour
 {
     public DialogueTrigger trigger;
@@ -10,6 +9,8 @@ public class DialogueAreaTrigger : MonoBehaviour
     public MasterQuest qManager;
     private Object self;
     public GameObject turtle;
+
+    public AudioClip questGet;
 
     void OnTriggerEnter(Collider other)
     {
