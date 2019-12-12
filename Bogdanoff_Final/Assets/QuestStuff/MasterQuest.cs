@@ -7,8 +7,12 @@ public class MasterQuest : MonoBehaviour
 {
     public PlayerQuests playerQuests;
 
-    public bool chickenQStarted = false;
-    public bool chickenQComp = false;
+    public bool squQStarted = false;
+    public bool squQComp = false;
+    public bool squDestroyed = false;
+    public Text squText;
+    public Text squStrike;
+    public GameObject squ2;
 
     public bool turtDestroyed = false;
     public bool turtleQStarted = false;
@@ -33,6 +37,8 @@ public class MasterQuest : MonoBehaviour
         turtStrike.text = "";
         crowText.text = "";
         crowStrike.text = "";
+        squText.text = "";
+        squStrike.text = "";
     }
 
     void Update()
@@ -61,10 +67,10 @@ public class MasterQuest : MonoBehaviour
          //CROW STUFF STARTS
         if (crowQStarted == true)
         {
-            crowText.text = "Find and bring 5 Feathers to Mr. Crow";
+            crowText.text = "Find and bring 3 Feathers to Mr. Crow";
         }
 
-        if (playerQuests.crowFeatherCount == 5)
+        if (playerQuests.crowFeatherCount == 3)
         {
             crowStrike.enabled = true;
             crowQComp = true;
@@ -78,6 +84,29 @@ public class MasterQuest : MonoBehaviour
         if (crowDestroyed == true)
         {
             crow2.SetActive(true);
+        }
+
+        //SQUIRREL STUFF STARTS
+
+        if (squQStarted == true)
+        {
+            squText.text = "Collect 10 nuts for Mr. Squirrel";
+        }
+
+        if (playerQuests.crowFeatherCount == 10)
+        {
+            squStrike.enabled = true;
+            squQComp = true;
+        }
+
+        if (squQComp == true)
+        {
+            squStrike.text = "__________________________________________________";
+        }
+
+        if (squDestroyed == true)
+        {
+            squ2.SetActive(true);
         }
     }
 }

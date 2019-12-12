@@ -17,10 +17,16 @@ public class PlayerQuests : MonoBehaviour
     public Text crowCountText;
     public Text crowtText;
 
+    public int squNutCount = 0;
+    public Text squCountText;
+    public Text squText;
+
+
     void Start()
     {
         turtCountText.text = "";
         crowCountText.text = "";
+        squCountText.text = "";
     }
     void OnTriggerEnter(Collider other)
     {
@@ -45,7 +51,29 @@ public class PlayerQuests : MonoBehaviour
             qManager.turtleQStarted = true;
 
         }
+        //Squirrel Stuff
 
+      /*  if (other.gameObject.CompareTag("SquPickup") && qManager.squQStarted == true)
+        {
+
+            if (qManager.squQStarted)
+            {
+                other.gameObject.SetActive(false);
+                squNutCount = squNutCount + 1;
+                SetCountSquText();
+                if (squNutCount == 3)
+                {
+                    qManager.squStrike.enabled = true;
+                    qManager.squQComp = true;
+                }
+            }
+        }
+
+        if (other.gameObject.CompareTag("Squirrel"))
+        {
+            qManager.squQStarted = true;
+        }
+        */
     }
     public void SetCountTextTurt()
     {
@@ -58,5 +86,10 @@ public class PlayerQuests : MonoBehaviour
         {
            qManager.turtleQStarted = false;
         } 
+    }
+
+    public void SetCountSquText()
+    {
+        squCountText.text = squNutCount + "/10";
     }
 }

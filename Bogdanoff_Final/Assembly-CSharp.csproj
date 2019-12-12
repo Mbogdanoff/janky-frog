@@ -66,8 +66,10 @@
     <Compile Include="Assets\DialogueStuff\Dialogue.cs" />
     <Compile Include="Assets\DialogueStuff\DialogueAreaTrigger.cs" />
     <Compile Include="Assets\DialogueStuff\DialogueAreaTriggerCrow.cs" />
+    <Compile Include="Assets\DialogueStuff\DialogueAreaTriggerSqu.cs" />
     <Compile Include="Assets\DialogueStuff\DialogueManager.cs" />
     <Compile Include="Assets\DialogueStuff\DialogueTrigger.cs" />
+    <Compile Include="Assets\DialogueStuff\SqirTrig2.cs" />
     <Compile Include="Assets\DialogueStuff\TurtleTrig2.cs" />
     <Compile Include="Assets\GrappleHook\Scrips\grapplingHook.cs" />
     <Compile Include="Assets\GrappleHook\Scrips\hookDetector.cs" />
