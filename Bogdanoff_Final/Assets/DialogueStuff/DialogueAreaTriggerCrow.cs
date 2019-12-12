@@ -26,6 +26,7 @@ public class DialogueAreaTriggerCrow : MonoBehaviour
         {
             crowFeatherCount = crowFeatherCount + 1;
             SetCountTextCrow();
+            Destroy(other, 2f);
             if (crowFeatherCount == 5)
             {
                 qManager.crowStrike.enabled = true;
