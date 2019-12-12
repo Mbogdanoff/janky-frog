@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     bool rib;
     bool isMlem = false;
     public AudioClip mlem;
-
+    public Image tutPopup;
 
     void Update()
     {
@@ -32,7 +32,12 @@ public class PlayerController : MonoBehaviour
             source.PlayOneShot(mlem);
             isMlem = true;
             Invoke("MlemShot", .25f);
-        } 
+        }
+
+        if (Input.GetKey("tab"))
+        {
+            tutPopup.SetActive(true);
+        }
     }
     void OnTriggerEnter(Collider other)
     {
@@ -51,4 +56,6 @@ public class PlayerController : MonoBehaviour
     {
         isMlem = false;
     }
+
+
 }
