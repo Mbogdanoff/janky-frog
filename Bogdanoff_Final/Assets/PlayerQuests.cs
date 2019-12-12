@@ -26,7 +26,7 @@ public class PlayerQuests : MonoBehaviour
     {
         turtCountText.text = "";
         crowCountText.text = "";
-        squCountText.text = "";
+       // squCountText.text = "";
     }
     void OnTriggerEnter(Collider other)
     {

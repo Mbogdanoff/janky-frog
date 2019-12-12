@@ -37,8 +37,8 @@ public class MasterQuest : MonoBehaviour
         turtStrike.text = "";
         crowText.text = "";
         crowStrike.text = "";
-        squText.text = "";
-        squStrike.text = "";
+       //squText.text = "";
+       //squStrike.text = "";
     }
 
     void Update()

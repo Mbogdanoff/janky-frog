@@ -11,7 +11,7 @@ public class DialogueAreaTriggerCrow : MonoBehaviour
     public PlayerQuests playerQ;
     public MasterQuest qManager;
     public GameObject crow;
-
+    public ParticleSystem poof;
 
     void OnTriggerEnter(Collider other)
     {
@@ -27,6 +27,7 @@ public class DialogueAreaTriggerCrow : MonoBehaviour
             crowFeatherCount = crowFeatherCount + 1;
             SetCountTextCrow();
             Destroy(other, 2f);
+            Instantiate(poof, other.transform);
             if (crowFeatherCount == 3)
             {
                 qManager.crowStrike.enabled = true;
