@@ -979,7 +979,7 @@ MonoBehaviour:
   crowText: {fileID: 1300521937}
   crowStrike: {fileID: 729466039}
   crow2: {fileID: 1584313734218345}
-  qComp: {fileID: 0}
+  qComp: {fileID: 8300000, guid: 4abde2b7ce6f4ec41acc94fda1d1cb92, type: 3}
 --- !u!4 &55114255
 Transform:
   m_ObjectHideFlags: 0
