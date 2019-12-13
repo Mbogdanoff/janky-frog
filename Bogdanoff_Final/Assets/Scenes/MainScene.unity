@@ -19908,7 +19908,8 @@ MonoBehaviour:
   dialogue:
     name: Mr. Crow
     sentences:
-    - Thank you kindly!
+    - Thank you kindly!My friend Mr. Turtle is somewhere on one of the trees, mind
+      checking up on him for me?
 --- !u!33 &1823232650
 MeshFilter:
   m_ObjectHideFlags: 0

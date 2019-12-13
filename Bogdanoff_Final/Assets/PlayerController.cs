@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey("tab"))
         {
-            tutPopup.SetActive(true);
+           // tutPopup.SetActive(true);
         }
     }
     void OnTriggerEnter(Collider other)
