@@ -11,7 +11,14 @@ public class PlayerController : MonoBehaviour
     bool rib;
     bool isMlem = false;
     public AudioClip mlem;
-    public Image tutPopup;
+    public GameObject tutPop;
+    public GameObject beginningTutPop;
+
+    void Awake()
+    {
+        beginningTutPop.SetActive(true);
+        Invoke("tutPopSet", 5f);
+    }
 
     void Update()
     {
@@ -36,7 +43,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey("tab"))
         {
-           // tutPopup.SetActive(true);
+            tutPop.SetActive(true);
+        }
+        else
+        {
+            tutPop.SetActive(false);
         }
     }
     void OnTriggerEnter(Collider other)
@@ -57,5 +68,9 @@ public class PlayerController : MonoBehaviour
         isMlem = false;
     }
 
+    void tutPopSet()
+    {
+        beginningTutPop.SetActive(false);
+    }
 
 }
