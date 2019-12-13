@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class MasterQuest : MonoBehaviour
 {
@@ -30,6 +31,12 @@ public class MasterQuest : MonoBehaviour
 
     public AudioClip qComp;
     public bool youWin = false;
+
+    public AudioClip endJingle;
+    public AudioClip questJingle;
+    public AudioMixer masterMixer;
+    public AudioSource bGM;
+    public AudioSource source;
 
 
     void Start()

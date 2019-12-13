@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class PlayerController : MonoBehaviour
     public GameObject beginningTutPop;
     public GameObject endPop;
     public MasterQuest qManager;
+    public AudioClip endJingle;
+    public AudioClip questJingle;
+    public AudioMixer masterMixer;
+    public AudioSource bGM;
 
     void Awake()
     {
@@ -34,6 +39,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G) && qManager.youWin)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            masterMixer.SetFloat("BGM", -5f);
         }
 
         if (Input.GetKey("r") &&! rib)

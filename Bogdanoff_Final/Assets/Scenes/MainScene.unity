@@ -1068,6 +1068,11 @@ MonoBehaviour:
   crow2: {fileID: 1584313734218345}
   qComp: {fileID: 8300000, guid: 4abde2b7ce6f4ec41acc94fda1d1cb92, type: 3}
   youWin: 0
+  endJingle: {fileID: 8300000, guid: 366b64110ce771141a7213872d30e486, type: 3}
+  questJingle: {fileID: 8300000, guid: 6c499f16ab4ed214ea2a53acf45f37ab, type: 3}
+  masterMixer: {fileID: 24100000, guid: 3e33d4b2360c5dd47b9db354bcd2ac92, type: 2}
+  bGM: {fileID: 1951820973}
+  source: {fileID: 1951820973}
 --- !u!4 &55114255
 Transform:
   m_ObjectHideFlags: 0
@@ -23005,9 +23010,9 @@ GameObject:
   - component: {fileID: 1951820973}
   - component: {fileID: 1951820972}
   - component: {fileID: 1951820971}
-  - component: {fileID: 1951820970}
   - component: {fileID: 1951820969}
   - component: {fileID: 1951820975}
+  - component: {fileID: 1951820970}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -29498,6 +29503,23 @@ PrefabInstance:
       propertyPath: endPop
       value: 
       objectReference: {fileID: 2010021352}
+    - target: {fileID: 580178575, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: endJingle
+      value: 
+      objectReference: {fileID: 8300000, guid: 366b64110ce771141a7213872d30e486, type: 3}
+    - target: {fileID: 580178575, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: questJingle
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c499f16ab4ed214ea2a53acf45f37ab, type: 3}
+    - target: {fileID: 580178575, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: masterMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 3e33d4b2360c5dd47b9db354bcd2ac92,
+        type: 2}
+    - target: {fileID: 580178575, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: bGM
+      value: 
+      objectReference: {fileID: 1951820973}
     - target: {fileID: 8132999856224781307, guid: c6453f8e1f814744d8b94e5a6d1f9942,
         type: 3}
       propertyPath: m_Enabled
