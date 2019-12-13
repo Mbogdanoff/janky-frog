@@ -29,6 +29,7 @@ public class MasterQuest : MonoBehaviour
     public GameObject crow2;
 
     public AudioClip qComp;
+    public bool youWin = false;
 
 
     void Start()
@@ -37,15 +38,15 @@ public class MasterQuest : MonoBehaviour
         turtStrike.text = "";
         crowText.text = "";
         crowStrike.text = "";
-       //squText.text = "";
-       //squStrike.text = "";
+        squText.text = "";
+        squStrike.text = "";
     }
 
     void Update()
     {
         if (turtleQStarted == true)
         {
-            turtText.text = "Collect 3 flowers";
+            turtText.text = "Collect 3 purple flowers for Mr. Turtle";
         }
 
          if (playerQuests.turtFlowerCount == 3)
@@ -90,10 +91,10 @@ public class MasterQuest : MonoBehaviour
 
         if (squQStarted == true)
         {
-            squText.text = "Collect 10 nuts for Mr. Squirrel";
+            squText.text = "Collect 10 mushrooms for Ms. Squirrel";
         }
 
-        if (playerQuests.crowFeatherCount == 10)
+        if (playerQuests.squMushCount == 10)
         {
             squStrike.enabled = true;
             squQComp = true;
@@ -107,6 +108,11 @@ public class MasterQuest : MonoBehaviour
         if (squDestroyed == true)
         {
             squ2.SetActive(true);
+        }
+
+        if (crowQComp && squQComp && turtleQComp)
+        {
+            youWin = true;
         }
     }
 }

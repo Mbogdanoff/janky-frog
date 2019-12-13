@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,11 +14,14 @@ public class PlayerController : MonoBehaviour
     public AudioClip mlem;
     public GameObject tutPop;
     public GameObject beginningTutPop;
+    public GameObject endPop;
+    public MasterQuest qManager;
 
     void Awake()
     {
         beginningTutPop.SetActive(true);
         Invoke("tutPopSet", 5f);
+        endPop.SetActive(false);
     }
 
     void Update()
@@ -25,6 +29,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey("escape"))
         {
             Application.Quit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.G) && qManager.youWin)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         if (Input.GetKey("r") &&! rib)
@@ -48,6 +57,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             tutPop.SetActive(false);
+        }
+
+        if (qManager.youWin)
+        {
+            endPop.SetActive(true);
+        }
+        else
+        {
+            endPop.SetActive(false);
         }
     }
     void OnTriggerEnter(Collider other)

@@ -16,6 +16,7 @@ TagManager:
   - CrowPickup
   - Floor
   - Squirrel
+  - mushPickup
   layers:
   - Default
   - TransparentFX

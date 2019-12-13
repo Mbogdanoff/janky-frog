@@ -17,16 +17,17 @@ public class PlayerQuests : MonoBehaviour
     public Text crowCountText;
     public Text crowtText;
 
-    public int squNutCount = 0;
+    public int squMushCount = 0;
     public Text squCountText;
     public Text squText;
+    bool mushPickup = false;
 
 
     void Start()
     {
         turtCountText.text = "";
         crowCountText.text = "";
-       // squCountText.text = "";
+        squCountText.text = "";
     }
     void OnTriggerEnter(Collider other)
     {
@@ -49,19 +50,22 @@ public class PlayerQuests : MonoBehaviour
         if (other.gameObject.CompareTag("Turtle"))
         {
             qManager.turtleQStarted = true;
-
         }
-        //Squirrel Stuff
 
-      /*  if (other.gameObject.CompareTag("SquPickup") && qManager.squQStarted == true)
+        //Squirrel Stuff
+        if (other.gameObject.CompareTag("mushPickup") && qManager.squQStarted == true &! mushPickup)
         {
 
             if (qManager.squQStarted)
             {
-                other.gameObject.SetActive(false);
-                squNutCount = squNutCount + 1;
+                squMushCount = squMushCount + 1;
                 SetCountSquText();
-                if (squNutCount == 3)
+                Destroy(other, 0f);
+                other.gameObject.SetActive(false);
+                Debug.Log("+1");
+                mushPickup = true;
+                Invoke("MushSet", .5f);
+                if (squMushCount == 10)
                 {
                     qManager.squStrike.enabled = true;
                     qManager.squQComp = true;
@@ -73,7 +77,7 @@ public class PlayerQuests : MonoBehaviour
         {
             qManager.squQStarted = true;
         }
-        */
+        
     }
     public void SetCountTextTurt()
     {
@@ -90,6 +94,11 @@ public class PlayerQuests : MonoBehaviour
 
     public void SetCountSquText()
     {
-        squCountText.text = squNutCount + "/10";
+        squCountText.text = squMushCount + "/10";
+    }
+    
+    void MushSet()
+    {
+        mushPickup = false;
     }
 }

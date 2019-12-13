@@ -15,12 +15,11 @@ public class DialogueAreaTriggerSqu : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && qManager.turtleQComp == false)
+        if (other.gameObject.CompareTag("Player") && qManager.squQComp == false)
         {
             trigger.Invoke("TriggerDialogue", 0f);
             animator.SetBool("isOpen", true);
             qManager.squQStarted = true;
-
         }
     }
 
@@ -31,11 +30,10 @@ public class DialogueAreaTriggerSqu : MonoBehaviour
             nextS.Invoke("DisplayNextSentence", 0f);
         }
 
-        if (qManager.turtleQComp == true)
+        if (qManager.squQComp == true)
         {
-            qManager.turtDestroyed = true;
+            qManager.squDestroyed = true;
             Destroy(squirrel);
-
         }
     }
 
